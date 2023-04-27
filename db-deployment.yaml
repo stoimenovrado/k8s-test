@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bgappdb-deployment
+  labels:
+    app: bgappdb
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bgappdb
+  template:
+    metadata:
+      labels:
+        app: bgappdb
+    spec:
+      containers:
+        - name: bgappdb
+          image: shekeriev/bgapp-db
+          resources:
+            requests:
+              memory: 64Mi
+              cpu: 250m
+            limits:
+              memory: 128Mi
+              cpu: 500m
+          ports:
+            - containerPort: 3306
+          env:
+            - name: MYSQL_ROOT_PASSWORD
+              value: '12345'
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: POD_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: POD_IP
+              valueFrom:
+                fieldRef:
+                  fieldPath: status.podIP

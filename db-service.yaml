@@ -1,0 +1,12 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: bgappdb-service
+  namespace: bgapp
+spec:
+  selector:
+    app: bgappdb
+  ports:
+    - port: 3306
+      targetPort: 3306
