@@ -3,20 +3,20 @@ kind: Deployment
 metadata:
   name: bgappdb-deployment
   labels:
-    app: bgappdb
+    app: db
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: bgappdb
+      app: db
   template:
     metadata:
       labels:
-        app: bgappdb
+        app: db
     spec:
       containers:
         - name: bgappdb
-          image: shekeriev/bgapp-db
+          image: stoimenovrado/bgapp-db
           resources:
             requests:
               memory: 64Mi
