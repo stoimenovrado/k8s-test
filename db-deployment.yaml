@@ -15,7 +15,7 @@ spec:
         app: db
     spec:
       containers:
-        - name: bgappdb
+        - name: db
           image: stoimenovrado/bgapp-db
           resources:
             requests:
