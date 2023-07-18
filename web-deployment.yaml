@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: bgapp
-        image: shekeriev/bgapp-web:embedded
+        image: stoimenovrado/bgapp-web
         resources:
           requests:
             memory: "64Mi"
