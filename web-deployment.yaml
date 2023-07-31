@@ -1,8 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: bgapp-deployment
-  namespace: bgapp
+  name: bgapp-web-deployment
+  namespace: bgapp-web
   labels:
     app: bgapp
 spec:
@@ -13,10 +13,10 @@ spec:
   template:
     metadata:
       labels:
-        app: bgapp
+        app: bbgapp-web
     spec:
       containers:
-      - name: bgapp
+      - name: bgapp-web
         image: stoimenovrado/bgapp-web
         resources:
           requests:
