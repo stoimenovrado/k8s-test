@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: bgapp-deployment
+  namespace: bgapp
   labels:
     app: bgapp
 spec:
