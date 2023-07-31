@@ -6,7 +6,7 @@ metadata:
   namespace: bgapp
 spec:
   selector:
-    app: db
+    app: bgapp-db
   ports:
     - port: 3306
       targetPort: 3306
