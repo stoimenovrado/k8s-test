@@ -29,7 +29,7 @@ spec:
           - containerPort: 80
         env:
           - name: DB_HOST
-            value: bgappdb-service
+            value: db
           - name: DB_PORT
             value: "3306"
           - name: POD_NAME
