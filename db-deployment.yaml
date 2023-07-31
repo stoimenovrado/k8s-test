@@ -4,19 +4,19 @@ metadata:
   name: bgappdb-deployment
   namespace: bgapp
   labels:
-    app: db
+    app: bgapp-db
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: db
+      app: bgapp-db
   template:
     metadata:
       labels:
-        app: db
+        app: bgapp-db
     spec:
       containers:
-        - name: db
+        - name: bgapp-db
           image: stoimenovrado/bgapp-db
           resources:
             requests:
