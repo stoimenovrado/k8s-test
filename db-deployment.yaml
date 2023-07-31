@@ -4,12 +4,12 @@ metadata:
   name: bgappdb-deployment
   namespace: bgapp
   labels:
-    app: bgapp-db
+    app: bgapp
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: bgapp-db
+      app: bgapp
   template:
     metadata:
       labels:
