@@ -2,9 +2,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: bgappdb-deployment
-  namespace: bgapp
+  namespace: bgapp-db
   labels:
-    app: bgapp
+    app: bgapp-db
 spec:
   replicas: 1
   selector:
