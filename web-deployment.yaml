@@ -2,9 +2,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: bgapp-web-deployment
-  namespace: bgapp
+  namespace: bgapp-web
   labels:
-    app: bgapp
+    app: bgapp-web
 spec:
   replicas: 3
   selector:
@@ -13,7 +13,7 @@ spec:
   template:
     metadata:
       labels:
-        app: bbgapp-web
+        app: bgapp-web
     spec:
       containers:
       - name: bgapp-web
